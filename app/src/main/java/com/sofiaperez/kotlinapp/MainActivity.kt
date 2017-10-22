@@ -20,9 +20,11 @@ class MainActivity : AppCompatActivity() {
         val x: Int = 20
         val y: Long = x.toLong()
 
+        val person = Person("Sofia", "Perez")
+
         val mainTextView: View = findViewById(R.id.mainTextView)
         if (mainTextView is TextView) {
-            mainTextView.text = "Hello Sofia!"
+            mainTextView.text = "Hello ${person.getFullName()}!"
         }
     }
 }
