@@ -3,6 +3,9 @@ package com.sofiaperez.kotlinapp
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.toast
+import org.jetbrains.anko.uiThread
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,6 +17,13 @@ class MainActivity : AppCompatActivity() {
             if (isOk()) {
                 val person = Person(mainEditTextName.text.toString(), mainEditTextSurname.text.toString())
                 mainTextViewGreeting.text = "Hello ${person.getFullName()}!"
+            }
+        }
+
+        doAsync {
+            var result = runLongTask()
+            uiThread {
+                toast(result)
             }
         }
     }
@@ -29,5 +39,9 @@ class MainActivity : AppCompatActivity() {
             isOk = false
         }
         return isOk
+    }
+
+    private fun runLongTask(): String {
+        return "Testing Anko library"
     }
 }
