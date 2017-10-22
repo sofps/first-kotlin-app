@@ -1,3 +1,7 @@
 <resources>
   <string name="app_name">First Kotlin App</string>
+  <string name="input_name">Type your name</string>
+  <string name="input_surname">Type your surname</string>
+  <string name="try_it_button">Try it</string>
+  <string name="default_greeting">Hello World!</string>
 </resources>
