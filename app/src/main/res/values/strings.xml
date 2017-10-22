@@ -4,4 +4,5 @@
   <string name="input_surname">Type your surname</string>
   <string name="try_it_button">Try it</string>
   <string name="default_greeting">Hello World!</string>
+  <string name="input_email">Type your email</string>
 </resources>
