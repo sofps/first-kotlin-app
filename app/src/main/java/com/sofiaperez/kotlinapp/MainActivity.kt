@@ -1,9 +1,9 @@
 package com.sofiaperez.kotlinapp
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,9 +22,8 @@ class MainActivity : AppCompatActivity() {
 
         val person = Person("Sofia", "Perez")
 
-        val mainTextView: View = findViewById(R.id.mainTextView)
-        if (mainTextView is TextView) {
-            mainTextView.text = "Hello ${person.getFullName()}!"
-        }
+        // Using kotlin extensions
+        mainTextView.text = "Hello ${person.getFullName()}!"
+
     }
 }
